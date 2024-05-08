@@ -50,10 +50,10 @@ def extract_dgl_graph(abc):
         features[nodeIdx][nodeType] = 1.0
         if (aigNode.hasFanin0()):
             fanin = aigNode.fanin0()
-            G.add_edge(fanin, nodeIdx)
+            G.add_edges(fanin, nodeIdx)
         if (aigNode.hasFanin1()):
             fanin = aigNode.fanin1()
-            G.add_edge(fanin, nodeIdx)
+            G.add_edges(fanin, nodeIdx)
     G.ndata['feat'] = torch.tensor(features)
     return G
 

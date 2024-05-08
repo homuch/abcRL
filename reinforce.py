@@ -98,6 +98,7 @@ class PiApprox(object):
         self.tau = 0.5 # temperature for gumbel_softmax
 
     def __call__(self, s, graph, phaseTrain=True):
+        graph = dgl.add_self_loop(graph)
         self._network.eval()
         #s = torch.from_numpy(s).float() #.cuda()
         out = self._network(s, graph)
@@ -123,6 +124,7 @@ class PiApprox(object):
         return action.data.item()
 
     def update(self, s, graph, a, gammaT, delta):
+        graph = dgl.add_self_loop(graph)
         self._network.train()
         prob = self._network(s, graph)#.cuda())
         #logProb = -F.gumbel_softmax(prob, dim=-1, tau = self.tau, hard=True)
