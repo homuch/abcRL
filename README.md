@@ -11,10 +11,16 @@ The authors include [Keren Zhu](https://krz.engineer), Mingjie Liu, Hao Chen, Zh
 
 # Python environment
 
-The project is tested in the environment:
-```
+<!-- The project is tested in the environment: -->
+<!-- ```
 Python 3.7.5
 Pytorch 1.3
+``` -->
+
+The project is modified to run under:
+```
+python 3.12.3
+Pytorch 2.2.0
 ```
 
 The project has other dependencies such as `numpy, six, etc.`

@@ -1,0 +1,9 @@
+dgl==2.1.0
+numpy==1.26.4
+pandas==2.2.2
+pydantic==2.7.1
+PyYAML==6.0.1
+six==1.16.0
+torch==2.2.0
+torchdata==0.7.1
+
